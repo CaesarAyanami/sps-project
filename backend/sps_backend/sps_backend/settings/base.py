@@ -15,7 +15,9 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS = [
+    'apps.base.apps.BaseConfig',
     'apps.users.apps.UsersConfig',
+    'apps.paciente.apps.PacienteConfig',
 ]
 
 THIRD_APPS = [
@@ -72,7 +74,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.User'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ES'
 
 TIME_ZONE = 'UTC'
 
