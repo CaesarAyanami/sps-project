@@ -1,9 +1,11 @@
+import React from 'react'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+/*import './App.css'*/
+import './Components.css'
 
-function App() {
+/*function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -32,4 +34,29 @@ function App() {
   )
 }
 
+
 export default App
+*/
+
+function Test(){
+  return(
+    <div className='test'>
+      <p>Hola</p>
+    </div>
+  )
+}
+export default Test
+
+function Header(){
+  return(
+    <div className='header'>
+      <div className='header-element'>
+        <h1 className='title'>SPS</h1>
+      </div>
+      <div className='header-element'>
+        <p>Este es un texto</p>
+      </div>
+    </div>
+    )
+}
+export {Header}
