@@ -31,3 +31,16 @@ body{
     align-items: center;
     text-align: center;
 }
+
+/* LOGIN*/
+
+.container-login{
+    background-color: blue;
+    height: 600px;
+}
+
+/*MENU*/
+
+.menu{
+    background-color: red;
+}

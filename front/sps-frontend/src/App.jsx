@@ -2,8 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route, Link } from "react-router"
 /*import './App.css'*/
 import './components/Components.css'
+import {Nav} from './components/Nav'
+import {Router} from './Router/AppRouter.jsx'
 
 /*function App() {
   const [count, setCount] = useState(0)
@@ -38,14 +41,17 @@ import './components/Components.css'
 export default App
 */
 
-function Test(){
+function Menu(){
   return(
-    <div className='test'>
-      <p>Hola</p>
+    <div className='menu'>
+    <BrowserRouter>
+      <Nav />
+      <Router />
+    </BrowserRouter>
     </div>
   )
 }
-export default Test
+export {Menu}
 
 function Header(){
   return(
