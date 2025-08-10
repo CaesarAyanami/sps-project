@@ -1,12 +1,25 @@
 import React from 'react'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { BrowserRouter, Routes, Route, Link } from "react-router"
+//import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 /*import './App.css'*/
 import './components/Components.css'
-import {Nav} from './components/Nav'
-import {Router} from './Router/AppRouter.jsx'
+import { Header } from './components/Header'
+import { Menu } from './components/Menu'
+
+
+
+function App() {
+  return (
+    <>
+      <Header/>
+      <Menu />
+    </>
+  );
+}
+
+export default App;
+
+
 
 /*function App() {
   const [count, setCount] = useState(0)
@@ -40,29 +53,3 @@ import {Router} from './Router/AppRouter.jsx'
 
 export default App
 */
-
-function Menu(){
-  return(
-    <div className='menu'>
-    <BrowserRouter>
-      <Nav />
-      <Router />
-    </BrowserRouter>
-    </div>
-  )
-}
-export {Menu}
-
-function Header(){
-  return(
-    <div className='header'>
-      <div className='header-element'>
-        <h1 className='title'>SPS</h1>
-      </div>
-      <div className='header-element'>
-        <p>Este es un texto</p>
-      </div>
-    </div>
-    )
-}
-export {Header}

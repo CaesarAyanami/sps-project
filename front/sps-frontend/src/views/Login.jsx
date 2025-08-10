@@ -1,4 +1,17 @@
-import './components/Components.css'
+import './viewStyles.css'
+
+function Menu(){
+return(
+    <div className='menu'>
+    <BrowserRouter>
+    <Nav />
+    <Router />
+    </BrowserRouter>
+    </div>
+)
+}
+export {Menu}
+
 
 function ContainerLogin(){
 return(

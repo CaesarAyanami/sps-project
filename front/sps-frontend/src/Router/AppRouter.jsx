@@ -1,10 +1,11 @@
-import {Routes, Route } from "react-router"
+import {Routes, Route } from "react-router-dom"
+import { ContainerLogin } from "../views/Login"
 
 function Router(){
     return(
         <Routes>
             <Route path="/" element={<inicio />} />
-            <Route path="/login" element={<login />} />
+            <Route path="/login" element={<ContainerLogin />} />
             <Route path="/archivo" element={<archivo />} />
         </Routes>
     )
