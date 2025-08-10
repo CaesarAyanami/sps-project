@@ -1,13 +1,15 @@
 import {Routes, Route } from "react-router-dom"
+import { Home } from "../views/Home"
+import { Archive } from "../views/Archive"
 import { ContainerLogin } from "../views/Login"
 
-function Router(){
+function AppRouter(){
     return(
         <Routes>
-            <Route path="/" element={<inicio />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<ContainerLogin />} />
-            <Route path="/archivo" element={<archivo />} />
+            <Route path="/archive" element={<Archive />} />
         </Routes>
     )
 }
-export {Router}
+export default AppRouter

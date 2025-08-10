@@ -1,18 +1,19 @@
 import React from 'react'
-//import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-/*import './App.css'*/
 import './components/Components.css'
 import { Header } from './components/Header'
 import { Menu } from './components/Menu'
+import AppRouter from './router/AppRouter'
 
 
 
 function App() {
   return (
     <>
-      <Header/>
+      <Header />
       <Menu />
+      <main className='flex-grow'> 
+        <AppRouter />
+      </main>
     </>
   );
 }
