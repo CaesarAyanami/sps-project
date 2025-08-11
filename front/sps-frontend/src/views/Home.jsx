@@ -1,4 +1,5 @@
 import './viewStyles.css'
+import '../components/Components.css'
 
 function Home(){
 return(

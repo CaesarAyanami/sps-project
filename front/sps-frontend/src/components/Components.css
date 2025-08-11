@@ -31,13 +31,21 @@ body{
     align-items: center;
     text-align: center;
 }
+/*LOGIN*/
 
-/* LOGIN*/
-
-.container-login{
-    background-color: blue;
-    height: 600px;
+.button-submit{
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.button-submit:hover {
+    background-color: #033da1; 
+}
+
+/*.text-logout{
+    margin-top: -4px ;
+}*/
 
 /*MENU*/
 
@@ -54,6 +62,7 @@ body{
 }
 
 .nav-element:hover{
+    width: 100%;
     background-color: rgb(115, 137, 140);
 }
 
@@ -63,11 +72,10 @@ body{
     display:flex;
     justify-content: center;
     text-align: center;
-    max-width: 10rem;
-    max-height: 2rem;
+    min-width: auto;
+    max-width: 9rem;
     padding: 8px 12px;
     border: 1px solid black;
-    border-radius: 4px; 
     background-color: #f44336; 
     color: white; 
     font-size: 14px; 
@@ -77,8 +85,4 @@ body{
 
 .button-logout:hover {
     background-color: #d32f2f; 
-}
-
-.text-logout{
-    margin-top: -4px ;
 }

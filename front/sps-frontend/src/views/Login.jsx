@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './viewStyles.css'
+import '../components/Components.css'
 
 
 function Login({ onLogin }) {
@@ -34,7 +35,7 @@ return (
                 <label htmlFor="password">Contraseña:</label>   
                 <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <button type="submit">Entrar</button>
+            <button type="submit" className='button-submit px-4 py-2 bg-blue-600 text-white rounded mt-4'>Entrar</button>
         </form>
         </div>
     </div>
