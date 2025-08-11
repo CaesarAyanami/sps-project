@@ -4,9 +4,8 @@ function Menu(){
   return(
     <div className='menu'>
       <nav>
-        <Link to="/"> Inicios </Link>
-        <Link to="/login"> Iniciar Sesión </Link>
-        <Link to="/archive">Archivo</Link>
+        <Link className="nav-element" to="/home"> Inicio </Link>
+        <Link className="nav-element" to="/archive">Archivo</Link>
       </nav>
     </div>
   )
