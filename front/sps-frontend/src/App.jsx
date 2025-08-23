@@ -1,36 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Menu } from './components/Menu';
 import { Login } from './views/Login';
 import AppRouter from './router/AppRouter';
-import './components/Components.css'
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(
+        () => localStorage.getItem('isAuthenticated') === 'true'
+    );
 
-  const handleLogin = () => {
-    setIsAuthenticated(true);
-  };
-  
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-  };
+    useEffect(() => {
+        if (isAuthenticated) {
+            localStorage.setItem('isAuthenticated', 'true');
+        } else {
+            localStorage.removeItem('isAuthenticated');
+        }
+    }, [isAuthenticated]);
 
-  return (
-    <>
-      {isAuthenticated ? (
+    const handleLogin = () => {
+        setIsAuthenticated(true);
+    };
+
+    const handleLogout = () => {
+        setIsAuthenticated(false);
+    };
+
+    return (
         <>
-          <Header onLogout={handleLogout} /> 
-          <Menu />
-          <main className='flex-grow'>
-            <AppRouter />
-          </main>
+            {isAuthenticated ? (
+                <>
+                    <Header onLogout={handleLogout} />
+                    <Menu />
+                    <main className='flex-grow'>
+                        <AppRouter />
+                    </main>
+                </>
+            ) : (
+                <Login onLogin={handleLogin} />
+            )}
         </>
-      ) : (
-        <Login onLogin={handleLogin} />
-      )}
-    </>
-  );
+    );
 }
 
 export default App;
@@ -66,6 +75,6 @@ export default App;
   )
 }
 
-
+port default App;
 export default App
 */

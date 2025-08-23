@@ -28,12 +28,14 @@ return (
         <h2 className='login-title'>Iniciar Sesión</h2>
         <form className='form-container' onSubmit={handleLogin}>
             <div>
-                <label htmlFor="username">Usuario:</label>
-                <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <label htmlFor="username">
+                    <input type="text" id="username" value={username} placeholder='Usuario' onChange={(e) => setUsername(e.target.value)} />
+                </label>
             </div>
             <div>
-                <label htmlFor="password">Contraseña:</label>   
-                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <label htmlFor="password">
+                    <input type="password" id="password" value={password} placeholder='Contraseña' onChange={(e) => setPassword(e.target.value)} />
+                </label> 
             </div>
             <button type="submit" className='button-submit px-4 py-2 bg-blue-600 text-white rounded mt-4'>Entrar</button>
         </form>
