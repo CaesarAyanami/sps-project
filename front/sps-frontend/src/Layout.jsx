@@ -7,7 +7,7 @@ function Layout() {
 
     const handleLogout = () => {
         localStorage.removeItem("Authenticated");
-        navigate("/", { replace: true });
+        window.location.href = "/";
     };
 
     return (
