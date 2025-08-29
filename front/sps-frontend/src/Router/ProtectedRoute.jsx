@@ -1,14 +1,13 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
-const ProtectedRoute = ({ children }) => 
-    {
-    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+function ProtectedRoute () {
+    const Authenticated = localStorage.getItem('Authenticated') === 'true';
 
-    if (!isAuthenticated) 
+    if (!Authenticated) 
         {
-            return <Navigate to="/login" replace />;
+            return <Navigate to="/" replace />;
         }
-    return children;
+    return <Outlet/>;
     };
 
 export default ProtectedRoute;

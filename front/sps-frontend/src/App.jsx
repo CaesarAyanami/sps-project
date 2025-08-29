@@ -1,45 +1,25 @@
-import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Menu } from './components/Menu';
 import { Login } from './views/Login';
 import AppRouter from './router/AppRouter';
+import { useAuthStorage } from './hooks/UseAuthStorage';
 
 function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(
-        () => localStorage.getItem('isAuthenticated') === 'true'
-    );
+  const { Authenticated, login, logout } = useAuthStorage();
 
-    useEffect(() => {
-        if (isAuthenticated) {
-            localStorage.setItem('isAuthenticated', 'true');
-        } else {
-            localStorage.removeItem('isAuthenticated');
-        }
-    }, [isAuthenticated]);
-
-    const handleLogin = () => {
-        setIsAuthenticated(true);
-    };
-
-    const handleLogout = () => {
-        setIsAuthenticated(false);
-    };
-
+  if (Authenticated) {
     return (
-        <>
-            {isAuthenticated ? (
-                <>
-                    <Header onLogout={handleLogout} />
-                    <Menu />
-                    <main className='flex-grow'>
-                        <AppRouter />
-                    </main>
-                </>
-            ) : (
-                <Login onLogin={handleLogin} />
-            )}
-        </>
+      <>
+        <main className="flex-grow">
+          <useAuthStorage>
+            <AppRouter />
+          </useAuthStorage>
+        </main>
+      </>
     );
+  }
+
+  return <Login onLogin={login} />;
 }
 
 export default App;

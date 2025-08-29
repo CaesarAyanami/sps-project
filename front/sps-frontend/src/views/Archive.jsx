@@ -1,9 +1,6 @@
 import './viewStyles.css'
 import '../components/Components.css'
 
-function Archive(){
-return(
-    <div>Archive</div>
-    )
+export default function Archive() {
+    return <div className="p-4">¡Bienvenido a Archivo!</div>;
 }
-export {Archive}

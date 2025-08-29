@@ -1,9 +1,6 @@
 import './viewStyles.css'
 import '../components/Components.css'
 
-function Home(){
-return(
-    <div>home</div>
-    )
+export default function Home() {
+    return <div className="p-4">¡Bienvenido a Home!</div>;
 }
-export {Home}
