@@ -10,4 +10,4 @@ function Menu(){
     </div>
   )
 }
-export {Menu}
+export default Menu

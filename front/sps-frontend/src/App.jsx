@@ -1,5 +1,3 @@
-import { Header } from './components/Header';
-import { Menu } from './components/Menu';
 import { Login } from './views/Login';
 import AppRouter from './router/AppRouter';
 import { useAuthStorage } from './hooks/UseAuthStorage';
@@ -11,9 +9,7 @@ function App() {
     return (
       <>
         <main className="flex-grow">
-          <useAuthStorage>
             <AppRouter />
-          </useAuthStorage>
         </main>
       </>
     );
