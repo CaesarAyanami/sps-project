@@ -31,21 +31,6 @@ body{
     align-items: center;
     text-align: center;
 }
-/*LOGIN*/
-
-.button-submit{
-    border: 1px solid black;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-submit:hover {
-    background-color: #033da1; 
-}
-
-/*.text-logout{
-    margin-top: -4px ;
-}*/
 
 /*MENU*/
 

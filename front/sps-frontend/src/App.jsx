@@ -3,7 +3,7 @@ import AppRouter from './router/AppRouter';
 import { useAuthStorage } from './hooks/UseAuthStorage';
 
 function App() {
-  const { Authenticated, login, logout } = useAuthStorage();
+  const { Authenticated, login,} = useAuthStorage();
 
   if (Authenticated) {
     return (
