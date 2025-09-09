@@ -34,21 +34,12 @@ body{
 
 /*MENU*/
 
-.menu{
+/*.menu{
     display: flex;
     justify-content: center;
     flex-direction: row;
     background-color: rgb(80, 99, 101);
     color: #ffffff;
-}
-
-.nav-element{
-    padding: 1px 10px;
-}
-
-.nav-element:hover{
-    width: 100%;
-    background-color: rgb(115, 137, 140);
 }
 
 /*button logout*/
