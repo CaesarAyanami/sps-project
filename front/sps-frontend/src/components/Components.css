@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+body{
+    margin: 0px;
+}
+
+.title{
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    max-height: 3rem;
+    min-height: 1rem;
+    width: 100%;
+    margin: 0px;
+    padding: 10px 20px;
+    border: 0px;
+    background-color: rgb(10, 152, 223);
+}
+
+.header-element{
+    padding-left: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/*MENU*/
+
+/*.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(80, 99, 101);
+    color: #ffffff;
+}
+
+/*button logout*/
+
+.button-logout{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    min-width: auto;
+    max-width: 3rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
